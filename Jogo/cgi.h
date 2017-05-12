@@ -24,6 +24,7 @@ Macros úteis para gerar CGIs
 
 #define BACKGROUND             printf("<image width=500 height=500 xlink:href=http://localhost/images/space1.png />\n")
 
+#define GAME_OVER							printf("<image width=500 height=500 xlink:href=http://localhost/images/gameover.png />\n")
 /**
 \brief Macro para fechar um svg
 */
@@ -39,6 +40,10 @@ Macros úteis para gerar CGIs
 */
 #define IMAGEM(X, Y, ESCALA, FICHEIRO)		printf("<image x=%d y=%d width=%d height=%d xlink:href=%s />\n", \
 												ESCALA * X, ESCALA* Y, ESCALA, ESCALA, IMAGE_PATH FICHEIRO)
+
+#define TEXTO(X, Y, ESCALA, TXT)						printf("<text x=%d y=%d>\n%s\n</text>\n", \
+															ESCALA * X, ESCALA * Y, TXT)
+
 
 /**
 \brief Macro para criar um quadrado

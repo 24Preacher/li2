@@ -16,7 +16,7 @@ doc:
 	doxygen
 
 clean:
-	rm -rf *.o exemplo Doxyfile latex html install
+	rm -rf *.o exemplo Doxyfile latex html install -lm
 
 estado.o: estado.c estado.h
 exemplo.o: exemplo.c cgi.h estado.h

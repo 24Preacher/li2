@@ -22,6 +22,10 @@ typedef struct posicao {
 \brief Estrutura que armazena o estado do jogo
 */
 typedef struct estado {
+	/** Nome do jogador */
+	char nome[80];
+	int hp;
+	float escala; // wtf is that?
 	/** \brief A posição do jogador */
 	POSICAO jog;
 	/** \brief O nº de inimigos */
@@ -32,7 +36,7 @@ typedef struct estado {
 	POSICAO inimigo[MAX_INIMIGOS];
 	/** \brief Array com a posição dos obstáculos */
 	POSICAO obstaculo[MAX_OBSTACULOS];
-	/** \brief Array com a posição das portas */
+	/** \brief A posição da porta */
 	POSICAO porta;
 } ESTADO;
 
@@ -44,7 +48,7 @@ typedef struct estado {
 char *estado2str(ESTADO e);
 
 /**
-\brief Função que converte uma string num estado 
+\brief Função que converte uma string num estado
 @param argumentos Uma string contendo os argumentos passados à CGI
 @returns O estado correspondente à string dos argumentos
 */
